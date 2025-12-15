@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Usuario - InvenSys</title>
+  <link rel="stylesheet" href="css/registro.css" />
+</head>
+<body>
+  <div id="particles-js"></div>  <!-- ID particulas.js -->
+  <div class="container">
+    <!-- Sección del formulario -->
+    <div class="form-section">
+      <div class="register-container">
+        <img src="img/logo-invensys.png" alt="Logo InvenSys" class="register-logo" />
+        <h2 class="register-title">Registro De Usuario</h2>
+
+        <form id="registro-form">
+          <div class="form-group">
+            <label for="nombres">Nombres:</label>
+            <input type="text" id="nombres" name="nombres" placeholder="Juan Carlos" required />
+            <small class="error-message" id="nombres-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" placeholder="Pérez Rodríguez" required />
+            <small class="error-message" id="apellidos-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="example@example.com" required />
+            <small class="error-message" id="correo-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" placeholder="Password" required />
+            <small class="error-message" id="contrasena-error"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="rol">Rol:</label>
+            <select id="rol" name="rol" required>
+              <option value="">Seleccione un rol</option>
+              <option value="Administrador">Administrador</option>
+              <option value="Usuario">Usuario</option>
+            </select>
+            <small class="error-message" id="rol-error"></small>
+          </div>
+
+          <button type="submit" class="btn-register">Registrarse</button>
+        </form>
+
+        <div class="login-links">
+          <a href="login.html">Volver al inicio de sesión</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección de imagen -->
+    <div class="image-section">
+      <img src="img/inventario-ilustracion.png" alt="Ilustración Inventario" />
+    </div>
+  </div>  
+
+  <script src="js/validacion-registro.js"></script>
+
+  <!-- Sección de particulas.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/background.js"></script>
+  
+</body>
+</html>

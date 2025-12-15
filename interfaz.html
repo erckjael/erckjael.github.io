@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InvenSys - Panel Principal</title>
+  <link rel="stylesheet" href="css/interfaz.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="particles-js"></div>  <!-- ID particulas.js -->
+  <div class="main-container">
+    <aside class="sidebar">
+      <div class="logo-container">
+        <a href="interfaz.html">
+          <img src="img/logo-invensys.png" alt="Logo InvenSys" class="login-logo" />
+        </a>
+      </div>
+      <nav class="main-menu">
+        <button onclick="toggleSubMenu('seguridad')"><i class="fas fa-user-shield"></i> Seguridad</button>
+        <div id="seguridad" class="submenu">
+          <a href="#" onclick="loadModule('usuarios')">Usuarios</a>
+          <a href="#" onclick="loadModule('roles')">Roles</a>
+        </div>
+
+        <button onclick="toggleSubMenu('terceros')"><i class="fas fa-users"></i> Terceros</button>
+        <div id="terceros" class="submenu">
+          <a href="#" onclick="loadModule('clientes')">Clientes</a>
+          <a href="#" onclick="loadModule('proveedores')">Proveedores</a>
+          <a href="#" onclick="loadModule('vendedores')">Vendedores</a>
+        </div>
+
+        <button onclick="toggleSubMenu('administracion')"><i class="fas fa-cogs"></i> Administración</button>
+        <div id="administracion" class="submenu">
+          <a href="#" onclick="loadModule('bodegas')">Bodegas</a>
+        </div>
+
+        <button onclick="toggleSubMenu('productos')"><i class="fas fa-boxes"></i> Productos</button>
+        <div id="productos" class="submenu">
+          <a href="#" onclick="loadModule('registro-productos')">Registrar</a>
+          <a href="#" onclick="loadModule('categorias')">Categorías</a>
+          <a href="#" onclick="loadModule('unidades')">Unidad de Medida</a>
+        </div>
+
+        <button onclick="toggleSubMenu('documentos')"><i class="fas fa-file-alt"></i> Documentos</button>
+        <div id="documentos" class="submenu">
+          <a href="#" onclick="loadModule('entradas')">Entradas</a>
+          <a href="#" onclick="loadModule('salidas')">Salidas</a>
+        </div>
+
+        <button onclick="toggleSubMenu('informes')"><i class="fas fa-chart-line"></i> Informes</button>
+        <div id="informes" class="submenu">
+          <a href="#" onclick="loadModule('inventario')">Inventario</a>
+          <a href="#" onclick="loadModule('kardex')">Kardex</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <button class="logout-button" onclick="cerrarSesion()" title="Cerrar sesión">
+        <i class="fas fa-sign-out-alt"></i>
+      </button>
+      <section class="welcome-message">
+        <h1>¡Bienvenidos a InvenSys!</h1>
+        <p><!--mensaje de bienvenida actualizado dinámicamente --></p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/interfaz.js"></script>
+
+  <!-- Sección de particulas.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/background-interfaz.js"></script>
+
+  <!-- Sección de libreria  jsPDF (PDF) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+
+</body>
+</html>

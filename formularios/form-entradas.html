@@ -1,0 +1,44 @@
+<!-- Formulario modal para Entradas o Salidas de productos -->
+<div class="modal-formulario">
+  <div class="form-section">
+    <div class="login-container">
+      <img src="img/logo-invensys.png" alt="Logo InvenSys" class="login-logo" />
+      <h2 class="login-subtitle">Registrar Entrada</h2>
+      <form id="form-documentos">
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha" required />
+        </div>
+        <div class="form-group">
+          <label for="producto">Producto:</label>
+          <input type="text" id="producto" name="producto" required />
+        </div>
+        <div class="form-group">
+          <label for="cantidad">Cantidad:</label>
+          <input type="number" id="cantidad" name="cantidad" required />
+        </div>
+        <div class="form-group">
+          <label for="proveedor">Proveedor:</label>
+          <input type="text" id="proveedor" name="proveedor" required />
+        </div>
+        <div class="form-group">
+          <label for="bodega">Bodega:</label>
+          <select id="bodega" name="bodega" required>
+            <option value="">Seleccione una bodega</option>
+            <option value="Bodega Principal">Bodega Principal</option>
+            <option value="Bodega Secundaria">Bodega Secundaria</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="costo">Costo:</label>
+          <input type="number" id="costo" name="costo" required />
+        </div>
+        <div class="form-group">
+          <label for="observaciones">Observaciones:</label>
+          <textarea id="observaciones" name="observaciones" rows="4" style="resize: none;" placeholder="Agrega detalles adicionales..."></textarea>
+        </div>
+        <button type="submit" class="btn-login">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
